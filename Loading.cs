@@ -10,11 +10,25 @@ using System.Windows.Forms;
 
 namespace Banking_Management_System
 {
-    public partial class Loading : Form
+    public partial class Loadingform : Form
     {
-        public Loading()
+        public Loadingform()
         {
             InitializeComponent();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            panel2.Width += 3;
+            if (panel2.Width >= 700)
+            {
+                timer1.Stop();
+                using (Form_Parent parentform = new Form_Parent())
+                {
+                    parentform.Show();
+                }
+
+            }
         }
     }
 }

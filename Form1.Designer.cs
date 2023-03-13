@@ -29,9 +29,8 @@ namespace Banking_Management_System
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.loadingPageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.loginsignUpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.user_formToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.loginSignUpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.manageAgentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registerNewAgentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manageCustomerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -39,37 +38,23 @@ namespace Banking_Management_System
             this.mainMenuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.accountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.transactionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.loginSignUpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // menuStrip1
+            // user_formToolStripMenuItem
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.loadingPageToolStripMenuItem,
-            this.manageAgentsToolStripMenuItem,
-            this.manageCustomerToolStripMenuItem,
-            this.mainMenuToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
-            this.menuStrip1.TabIndex = 1;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // loadingPageToolStripMenuItem
-            // 
-            this.loadingPageToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.loginsignUpToolStripMenuItem,
+            this.user_formToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.loginSignUpToolStripMenuItem1});
-            this.loadingPageToolStripMenuItem.Name = "loadingPageToolStripMenuItem";
-            this.loadingPageToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
-            this.loadingPageToolStripMenuItem.Text = "Userform";
+            this.user_formToolStripMenuItem.Name = "user_formToolStripMenuItem";
+            this.user_formToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
+            this.user_formToolStripMenuItem.Text = "Userform";
             // 
-            // loginsignUpToolStripMenuItem
+            // loginSignUpToolStripMenuItem1
             // 
-            this.loginsignUpToolStripMenuItem.Name = "loginsignUpToolStripMenuItem";
-            this.loginsignUpToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.loginsignUpToolStripMenuItem.Text = "Loading screen";
+            this.loginSignUpToolStripMenuItem1.Name = "loginSignUpToolStripMenuItem1";
+            this.loginSignUpToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.loginSignUpToolStripMenuItem1.Text = "Login/Sign up ";
             // 
             // manageAgentsToolStripMenuItem
             // 
@@ -111,20 +96,27 @@ namespace Banking_Management_System
             // accountToolStripMenuItem
             // 
             this.accountToolStripMenuItem.Name = "accountToolStripMenuItem";
-            this.accountToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.accountToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.accountToolStripMenuItem.Text = "Account ";
             // 
             // transactionToolStripMenuItem
             // 
             this.transactionToolStripMenuItem.Name = "transactionToolStripMenuItem";
-            this.transactionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.transactionToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.transactionToolStripMenuItem.Text = "Transaction ";
             // 
-            // loginSignUpToolStripMenuItem1
+            // menuStrip1
             // 
-            this.loginSignUpToolStripMenuItem1.Name = "loginSignUpToolStripMenuItem1";
-            this.loginSignUpToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.loginSignUpToolStripMenuItem1.Text = "Login/Sign up ";
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.user_formToolStripMenuItem,
+            this.manageAgentsToolStripMenuItem,
+            this.manageCustomerToolStripMenuItem,
+            this.mainMenuToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.TabIndex = 1;
+            this.menuStrip1.Text = "menuStrip1";
             // 
             // Form_Parent
             // 
@@ -136,6 +128,7 @@ namespace Banking_Management_System
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form_Parent";
             this.Text = "Parentform";
+            this.Load += new System.EventHandler(this.Form_Parent_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -145,9 +138,8 @@ namespace Banking_Management_System
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem loadingPageToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem loginsignUpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem user_formToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem loginSignUpToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem manageAgentsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registerNewAgentsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem manageCustomerToolStripMenuItem;
@@ -155,7 +147,7 @@ namespace Banking_Management_System
         private System.Windows.Forms.ToolStripMenuItem mainMenuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem accountToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem transactionToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem loginSignUpToolStripMenuItem1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
     }
 }
 

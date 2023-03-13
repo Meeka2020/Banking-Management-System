@@ -16,5 +16,14 @@ namespace Banking_Management_System
         {
             InitializeComponent();
         }
+
+        private void Form_Parent_Load(object sender, EventArgs e)
+        {
+            using (Loadingform loading = new Loadingform())
+            {
+                loading.Show();
+
+            }
+        }
     }
 }
