@@ -39,6 +39,7 @@ namespace Banking_Management_System
             this.accountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.transactionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.transactionToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -111,12 +112,19 @@ namespace Banking_Management_System
             this.user_formToolStripMenuItem,
             this.manageAgentsToolStripMenuItem,
             this.manageCustomerToolStripMenuItem,
-            this.mainMenuToolStripMenuItem});
+            this.mainMenuToolStripMenuItem,
+            this.transactionToolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // transactionToolStripMenuItem1
+            // 
+            this.transactionToolStripMenuItem1.Name = "transactionToolStripMenuItem1";
+            this.transactionToolStripMenuItem1.Size = new System.Drawing.Size(82, 20);
+            this.transactionToolStripMenuItem1.Text = "Transaction ";
             // 
             // Form_Parent
             // 
@@ -148,6 +156,7 @@ namespace Banking_Management_System
         private System.Windows.Forms.ToolStripMenuItem accountToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem transactionToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem transactionToolStripMenuItem1;
     }
 }
 
