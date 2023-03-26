@@ -40,6 +40,8 @@ namespace Banking_Management_System
             this.transactionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.transactionToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.mainMenuToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.mainMenuWindowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,6 +58,7 @@ namespace Banking_Management_System
             this.loginSignUpToolStripMenuItem1.Name = "loginSignUpToolStripMenuItem1";
             this.loginSignUpToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.loginSignUpToolStripMenuItem1.Text = "Login/Sign up ";
+            this.loginSignUpToolStripMenuItem1.Click += new System.EventHandler(this.loginSignUpToolStripMenuItem1_Click);
             // 
             // manageAgentsToolStripMenuItem
             // 
@@ -82,7 +85,7 @@ namespace Banking_Management_System
             // addNewCustomerToolStripMenuItem
             // 
             this.addNewCustomerToolStripMenuItem.Name = "addNewCustomerToolStripMenuItem";
-            this.addNewCustomerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addNewCustomerToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.addNewCustomerToolStripMenuItem.Text = "Add new Customer ";
             // 
             // mainMenuToolStripMenuItem
@@ -110,10 +113,11 @@ namespace Banking_Management_System
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.user_formToolStripMenuItem,
+            this.mainMenuToolStripMenuItem1,
             this.manageAgentsToolStripMenuItem,
             this.manageCustomerToolStripMenuItem,
-            this.mainMenuToolStripMenuItem,
-            this.transactionToolStripMenuItem1});
+            this.transactionToolStripMenuItem1,
+            this.mainMenuToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -126,6 +130,20 @@ namespace Banking_Management_System
             this.transactionToolStripMenuItem1.Size = new System.Drawing.Size(82, 20);
             this.transactionToolStripMenuItem1.Text = "Transaction ";
             // 
+            // mainMenuToolStripMenuItem1
+            // 
+            this.mainMenuToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mainMenuWindowToolStripMenuItem});
+            this.mainMenuToolStripMenuItem1.Name = "mainMenuToolStripMenuItem1";
+            this.mainMenuToolStripMenuItem1.Size = new System.Drawing.Size(83, 20);
+            this.mainMenuToolStripMenuItem1.Text = "Main Menu ";
+            // 
+            // mainMenuWindowToolStripMenuItem
+            // 
+            this.mainMenuWindowToolStripMenuItem.Name = "mainMenuWindowToolStripMenuItem";
+            this.mainMenuWindowToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.mainMenuWindowToolStripMenuItem.Text = "Main Menu Window ";
+            // 
             // Form_Parent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -136,7 +154,6 @@ namespace Banking_Management_System
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form_Parent";
             this.Text = "Parentform";
-            this.Load += new System.EventHandler(this.Form_Parent_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -157,6 +174,8 @@ namespace Banking_Management_System
         private System.Windows.Forms.ToolStripMenuItem transactionToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem transactionToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem mainMenuToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem mainMenuWindowToolStripMenuItem;
     }
 }
 

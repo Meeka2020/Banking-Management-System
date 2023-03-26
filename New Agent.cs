@@ -10,19 +10,13 @@ using System.Windows.Forms;
 
 namespace Banking_Management_System
 {
-    public partial class Form_Parent : Form
+    public partial class New_Agent : Form
     {
-        public Form_Parent()
+        public New_Agent()
         {
             InitializeComponent();
         }
 
-      
-        private void loginSignUpToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            var login = new Login();
-            login.MdiParent = this;
-            login.Show();
-        }
+        
     }
 }
