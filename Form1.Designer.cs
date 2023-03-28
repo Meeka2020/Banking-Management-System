@@ -31,17 +31,18 @@ namespace Banking_Management_System
         {
             this.user_formToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loginSignUpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.manageAgentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.registerNewAgentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manageCustomerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addNewCustomerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainMenuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.accountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.transactionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.transactionToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.mainMenuToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.mainMenuWindowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.manageAgentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registerNewAgentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.transactionToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.withdrawalsDebitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,23 +57,9 @@ namespace Banking_Management_System
             // loginSignUpToolStripMenuItem1
             // 
             this.loginSignUpToolStripMenuItem1.Name = "loginSignUpToolStripMenuItem1";
-            this.loginSignUpToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.loginSignUpToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.loginSignUpToolStripMenuItem1.Text = "Login/Sign up ";
             this.loginSignUpToolStripMenuItem1.Click += new System.EventHandler(this.loginSignUpToolStripMenuItem1_Click);
-            // 
-            // manageAgentsToolStripMenuItem
-            // 
-            this.manageAgentsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.registerNewAgentsToolStripMenuItem});
-            this.manageAgentsToolStripMenuItem.Name = "manageAgentsToolStripMenuItem";
-            this.manageAgentsToolStripMenuItem.Size = new System.Drawing.Size(103, 20);
-            this.manageAgentsToolStripMenuItem.Text = "Manage agents ";
-            // 
-            // registerNewAgentsToolStripMenuItem
-            // 
-            this.registerNewAgentsToolStripMenuItem.Name = "registerNewAgentsToolStripMenuItem";
-            this.registerNewAgentsToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
-            this.registerNewAgentsToolStripMenuItem.Text = "Register New agents ";
             // 
             // manageCustomerToolStripMenuItem
             // 
@@ -85,8 +72,9 @@ namespace Banking_Management_System
             // addNewCustomerToolStripMenuItem
             // 
             this.addNewCustomerToolStripMenuItem.Name = "addNewCustomerToolStripMenuItem";
-            this.addNewCustomerToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.addNewCustomerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.addNewCustomerToolStripMenuItem.Text = "Add new Customer ";
+            this.addNewCustomerToolStripMenuItem.Click += new System.EventHandler(this.addNewCustomerToolStripMenuItem_Click);
             // 
             // mainMenuToolStripMenuItem
             // 
@@ -114,7 +102,7 @@ namespace Banking_Management_System
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.user_formToolStripMenuItem,
             this.mainMenuToolStripMenuItem1,
-            this.manageAgentsToolStripMenuItem,
+            this.manageAgentToolStripMenuItem,
             this.manageCustomerToolStripMenuItem,
             this.transactionToolStripMenuItem1,
             this.mainMenuToolStripMenuItem});
@@ -123,12 +111,6 @@ namespace Banking_Management_System
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // transactionToolStripMenuItem1
-            // 
-            this.transactionToolStripMenuItem1.Name = "transactionToolStripMenuItem1";
-            this.transactionToolStripMenuItem1.Size = new System.Drawing.Size(82, 20);
-            this.transactionToolStripMenuItem1.Text = "Transaction ";
             // 
             // mainMenuToolStripMenuItem1
             // 
@@ -143,6 +125,35 @@ namespace Banking_Management_System
             this.mainMenuWindowToolStripMenuItem.Name = "mainMenuWindowToolStripMenuItem";
             this.mainMenuWindowToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
             this.mainMenuWindowToolStripMenuItem.Text = "Main Menu Window ";
+            // 
+            // manageAgentToolStripMenuItem
+            // 
+            this.manageAgentToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.registerNewAgentsToolStripMenuItem});
+            this.manageAgentToolStripMenuItem.Name = "manageAgentToolStripMenuItem";
+            this.manageAgentToolStripMenuItem.Size = new System.Drawing.Size(97, 20);
+            this.manageAgentToolStripMenuItem.Text = "Manage Agent";
+            // 
+            // registerNewAgentsToolStripMenuItem
+            // 
+            this.registerNewAgentsToolStripMenuItem.Name = "registerNewAgentsToolStripMenuItem";
+            this.registerNewAgentsToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
+            this.registerNewAgentsToolStripMenuItem.Text = "Register New Agents";
+            this.registerNewAgentsToolStripMenuItem.Click += new System.EventHandler(this.registerNewAgentsToolStripMenuItem_Click);
+            // 
+            // transactionToolStripMenuItem1
+            // 
+            this.transactionToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.withdrawalsDebitToolStripMenuItem});
+            this.transactionToolStripMenuItem1.Name = "transactionToolStripMenuItem1";
+            this.transactionToolStripMenuItem1.Size = new System.Drawing.Size(82, 20);
+            this.transactionToolStripMenuItem1.Text = "Transaction ";
+            // 
+            // withdrawalsDebitToolStripMenuItem
+            // 
+            this.withdrawalsDebitToolStripMenuItem.Name = "withdrawalsDebitToolStripMenuItem";
+            this.withdrawalsDebitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.withdrawalsDebitToolStripMenuItem.Text = "Withdrawals/Debit";
             // 
             // Form_Parent
             // 
@@ -165,8 +176,6 @@ namespace Banking_Management_System
 
         private System.Windows.Forms.ToolStripMenuItem user_formToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem loginSignUpToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem manageAgentsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem registerNewAgentsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem manageCustomerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addNewCustomerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mainMenuToolStripMenuItem;
@@ -176,6 +185,9 @@ namespace Banking_Management_System
         private System.Windows.Forms.ToolStripMenuItem transactionToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem mainMenuToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem mainMenuWindowToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem manageAgentToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registerNewAgentsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem withdrawalsDebitToolStripMenuItem;
     }
 }
 

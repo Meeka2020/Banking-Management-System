@@ -24,5 +24,19 @@ namespace Banking_Management_System
             login.MdiParent = this;
             login.Show();
         }
+
+        private void addNewCustomerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var new_customer = new New_Customer();
+            new_customer.MdiParent = this;
+            new_customer.Show();
+        }
+
+        private void registerNewAgentsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var register_new_agents = new Register_New_Agents();
+            register_new_agents.MdiParent = this;
+            register_new_agents.Show();
+        }
     }
 }

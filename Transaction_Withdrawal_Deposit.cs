@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace Banking_Management_System
 {
-    public partial class New_Agent : Form
+    public partial class Transaction_Withdrawal_Deposit : Form
     {
-        public New_Agent()
+        public Transaction_Withdrawal_Deposit()
         {
             InitializeComponent();
         }
-
-        
     }
 }

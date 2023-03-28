@@ -59,22 +59,34 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="New Agent.cs">
+    <Compile Include="New Customer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="New Agent.Designer.cs">
-      <DependentUpon>New Agent.cs</DependentUpon>
+    <Compile Include="New Customer.Designer.cs">
+      <DependentUpon>New Customer.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Register New Agents .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Register New Agents .Designer.cs">
+      <DependentUpon>Register New Agents .cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction_Withdrawal_Deposit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction_Withdrawal_Deposit.Designer.cs">
+      <DependentUpon>Transaction_Withdrawal_Deposit.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="New Agent.resx">
-      <DependentUpon>New Agent.cs</DependentUpon>
+    <EmbeddedResource Include="New Customer.resx">
+      <DependentUpon>New Customer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -86,6 +98,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Register New Agents .resx">
+      <DependentUpon>Register New Agents .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction_Withdrawal_Deposit.resx">
+      <DependentUpon>Transaction_Withdrawal_Deposit.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

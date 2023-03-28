@@ -10,16 +10,14 @@ using System.Windows.Forms;
 
 namespace Banking_Management_System
 {
-    public partial class Login : Form
+    public partial class Register_New_Agents : Form
     {
-        public Login()
+        public Register_New_Agents()
         {
             InitializeComponent();
         }
 
-        private void Login_Load(object sender, EventArgs e)
-        {
-
-        }
+       
     }
-}
+    }
+
