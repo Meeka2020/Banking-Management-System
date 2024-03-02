@@ -63,6 +63,46 @@ namespace Banking_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bankhk_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("bankhk-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cccard_e_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("cccard_e-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap contact_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("contact-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap contact_removebg_preview1 {
+            get {
+                object obj = ResourceManager.GetObject("contact-removebg-preview1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap green {
             get {
                 object obj = ResourceManager.GetObject("green", resourceCulture);
@@ -76,6 +116,16 @@ namespace Banking_Management_System.Properties {
         internal static System.Drawing.Bitmap green_2 {
             get {
                 object obj = ResourceManager.GetObject("green 2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_contact_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-contact-50", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -106,6 +156,26 @@ namespace Banking_Management_System.Properties {
         internal static System.Drawing.Bitmap Moneytree {
             get {
                 object obj = ResourceManager.GetObject("Moneytree", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap search_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("search-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap search_removebg_preview1 {
+            get {
+                object obj = ResourceManager.GetObject("search-removebg-preview1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="bankModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Balance_amt">
+          <Key>
+            <PropertyRef Name="bal_id" />
+          </Key>
+          <Property Name="bal_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="acc_num" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="acc_bal" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Cashdeposit">
+          <Key>
+            <PropertyRef Name="deposit_id" />
+          </Key>
+          <Property Name="deposit_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="acc_num" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="deposit_amt" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="cust_newaccounts">
+          <Key>
+            <PropertyRef Name="Cust_id" />
+          </Key>
+          <Property Name="Cust_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Cust_firstname" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Cust_lastname" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Date_of_birth" Type="datetime" Nullable="false" />
+          <Property Name="Trn_num" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="Cust_phone" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Cust_address" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Occupation" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Deposit_StartAMT" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Date_of_deposit" Type="datetime" Nullable="false" />
+          <Property Name="Cust_Gender" Type="varchar" MaxLength="9" />
+        </EntityType>
+        <EntityType Name="deposit">
+          <Key>
+            <PropertyRef Name="deposit_id" />
+          </Key>
+          <Property Name="deposit_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="acc_num" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="deposit_amt" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="logs">
+          <Key>
+            <PropertyRef Name="log_ID" />
+          </Key>
+          <Property Name="log_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Username" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="user_password" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Job" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="teams_info">
+          <Key>
+            <PropertyRef Name="agent_id" />
+          </Key>
+          <Property Name="agent_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="emp_firstname" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="emp_lastname" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="emp_address" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="emp_phone" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="emp_username" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="user_password" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="job" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="transferamt">
+          <Key>
+            <PropertyRef Name="transfer_id" />
+          </Key>
+          <Property Name="transfer_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="from_accnum" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="to_accnum" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="amount_trans" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="withdrawal">
+          <Key>
+            <PropertyRef Name="withdrawal_id" />
+          </Key>
+          <Property Name="withdrawal_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="acc_num" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="withdrawal_amt" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="bankModelStoreContainer">
+          <EntitySet Name="Balance_amt" EntityType="Self.Balance_amt" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Cashdeposit" EntityType="Self.Cashdeposit" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="cust_newaccounts" EntityType="Self.cust_newaccounts" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="deposit" EntityType="Self.deposit" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="logs" EntityType="Self.logs" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="teams_info" EntityType="Self.teams_info" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="transferamt" EntityType="Self.transferamt" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="withdrawal" EntityType="Self.withdrawal" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="bankModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Balance_amt">
+          <Key>
+            <PropertyRef Name="bal_id" />
+          </Key>
+          <Property Name="bal_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="acc_num" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="acc_bal" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Cashdeposit">
+          <Key>
+            <PropertyRef Name="deposit_id" />
+          </Key>
+          <Property Name="deposit_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="acc_num" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="deposit_amt" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="cust_newaccounts">
+          <Key>
+            <PropertyRef Name="Cust_id" />
+          </Key>
+          <Property Name="Cust_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Cust_firstname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Cust_lastname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Date_of_birth" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Trn_num" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Cust_phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Cust_address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Occupation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Deposit_StartAMT" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Date_of_deposit" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Cust_Gender" Type="String" MaxLength="9" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="deposit">
+          <Key>
+            <PropertyRef Name="deposit_id" />
+          </Key>
+          <Property Name="deposit_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="acc_num" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="deposit_amt" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="log">
+          <Key>
+            <PropertyRef Name="log_ID" />
+          </Key>
+          <Property Name="log_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="user_password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Job" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="teams_info">
+          <Key>
+            <PropertyRef Name="agent_id" />
+          </Key>
+          <Property Name="agent_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="emp_firstname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="emp_lastname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="emp_address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="emp_phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="emp_username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="user_password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="job" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="transferamt">
+          <Key>
+            <PropertyRef Name="transfer_id" />
+          </Key>
+          <Property Name="transfer_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="from_accnum" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="to_accnum" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="amount_trans" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="withdrawal">
+          <Key>
+            <PropertyRef Name="withdrawal_id" />
+          </Key>
+          <Property Name="withdrawal_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="acc_num" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="withdrawal_amt" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="bankEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Balance_amt" EntityType="Self.Balance_amt" />
+          <EntitySet Name="Cashdeposits" EntityType="Self.Cashdeposit" />
+          <EntitySet Name="cust_newaccounts" EntityType="Self.cust_newaccounts" />
+          <EntitySet Name="deposits" EntityType="Self.deposit" />
+          <EntitySet Name="logs" EntityType="Self.log" />
+          <EntitySet Name="teams_info" EntityType="Self.teams_info" />
+          <EntitySet Name="transferamts" EntityType="Self.transferamt" />
+          <EntitySet Name="withdrawals" EntityType="Self.withdrawal" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="bankModelStoreContainer" CdmEntityContainer="bankEntities1">
+          <EntitySetMapping Name="Balance_amt">
+            <EntityTypeMapping TypeName="bankModel.Balance_amt">
+              <MappingFragment StoreEntitySet="Balance_amt">
+                <ScalarProperty Name="bal_id" ColumnName="bal_id" />
+                <ScalarProperty Name="acc_num" ColumnName="acc_num" />
+                <ScalarProperty Name="acc_bal" ColumnName="acc_bal" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cashdeposits">
+            <EntityTypeMapping TypeName="bankModel.Cashdeposit">
+              <MappingFragment StoreEntitySet="Cashdeposit">
+                <ScalarProperty Name="deposit_id" ColumnName="deposit_id" />
+                <ScalarProperty Name="acc_num" ColumnName="acc_num" />
+                <ScalarProperty Name="deposit_amt" ColumnName="deposit_amt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="cust_newaccounts">
+            <EntityTypeMapping TypeName="bankModel.cust_newaccounts">
+              <MappingFragment StoreEntitySet="cust_newaccounts">
+                <ScalarProperty Name="Cust_id" ColumnName="Cust_id" />
+                <ScalarProperty Name="Cust_firstname" ColumnName="Cust_firstname" />
+                <ScalarProperty Name="Cust_lastname" ColumnName="Cust_lastname" />
+                <ScalarProperty Name="Date_of_birth" ColumnName="Date_of_birth" />
+                <ScalarProperty Name="Trn_num" ColumnName="Trn_num" />
+                <ScalarProperty Name="Cust_phone" ColumnName="Cust_phone" />
+                <ScalarProperty Name="Cust_address" ColumnName="Cust_address" />
+                <ScalarProperty Name="Occupation" ColumnName="Occupation" />
+                <ScalarProperty Name="Deposit_StartAMT" ColumnName="Deposit_StartAMT" />
+                <ScalarProperty Name="Date_of_deposit" ColumnName="Date_of_deposit" />
+                <ScalarProperty Name="Cust_Gender" ColumnName="Cust_Gender" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="deposits">
+            <EntityTypeMapping TypeName="bankModel.deposit">
+              <MappingFragment StoreEntitySet="deposit">
+                <ScalarProperty Name="deposit_id" ColumnName="deposit_id" />
+                <ScalarProperty Name="acc_num" ColumnName="acc_num" />
+                <ScalarProperty Name="deposit_amt" ColumnName="deposit_amt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="logs">
+            <EntityTypeMapping TypeName="bankModel.log">
+              <MappingFragment StoreEntitySet="logs">
+                <ScalarProperty Name="log_ID" ColumnName="log_ID" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="user_password" ColumnName="user_password" />
+                <ScalarProperty Name="Job" ColumnName="Job" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="teams_info">
+            <EntityTypeMapping TypeName="bankModel.teams_info">
+              <MappingFragment StoreEntitySet="teams_info">
+                <ScalarProperty Name="agent_id" ColumnName="agent_id" />
+                <ScalarProperty Name="emp_firstname" ColumnName="emp_firstname" />
+                <ScalarProperty Name="emp_lastname" ColumnName="emp_lastname" />
+                <ScalarProperty Name="emp_address" ColumnName="emp_address" />
+                <ScalarProperty Name="emp_phone" ColumnName="emp_phone" />
+                <ScalarProperty Name="emp_username" ColumnName="emp_username" />
+                <ScalarProperty Name="user_password" ColumnName="user_password" />
+                <ScalarProperty Name="job" ColumnName="job" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="transferamts">
+            <EntityTypeMapping TypeName="bankModel.transferamt">
+              <MappingFragment StoreEntitySet="transferamt">
+                <ScalarProperty Name="transfer_id" ColumnName="transfer_id" />
+                <ScalarProperty Name="from_accnum" ColumnName="from_accnum" />
+                <ScalarProperty Name="to_accnum" ColumnName="to_accnum" />
+                <ScalarProperty Name="amount_trans" ColumnName="amount_trans" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="withdrawals">
+            <EntityTypeMapping TypeName="bankModel.withdrawal">
+              <MappingFragment StoreEntitySet="withdrawal">
+                <ScalarProperty Name="withdrawal_id" ColumnName="withdrawal_id" />
+                <ScalarProperty Name="acc_num" ColumnName="acc_num" />
+                <ScalarProperty Name="withdrawal_amt" ColumnName="withdrawal_amt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

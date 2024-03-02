@@ -37,6 +37,20 @@ namespace Banking_Management_System
             var register_new_agents = new Register_New_Agents();
             register_new_agents.MdiParent = this;
             register_new_agents.Show();
+        } 
+
+        private void mainMenuWindowToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var Main_Menu_Window = new Main_Menu_Window();
+            Main_Menu_Window.MdiParent = this;
+            Main_Menu_Window.Show();
+        }
+
+        private void withdrawalsDebitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var WithdrawalsorDebit = new WithdrawalsorDebit();
+            WithdrawalsorDebit.MdiParent = this;
+            WithdrawalsorDebit.Show();
         }
     }
-}
+    }

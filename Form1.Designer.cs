@@ -72,7 +72,7 @@ namespace Banking_Management_System
             // addNewCustomerToolStripMenuItem
             // 
             this.addNewCustomerToolStripMenuItem.Name = "addNewCustomerToolStripMenuItem";
-            this.addNewCustomerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addNewCustomerToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.addNewCustomerToolStripMenuItem.Text = "Add new Customer ";
             this.addNewCustomerToolStripMenuItem.Click += new System.EventHandler(this.addNewCustomerToolStripMenuItem_Click);
             // 
@@ -108,7 +108,7 @@ namespace Banking_Management_System
             this.mainMenuToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(849, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -125,6 +125,7 @@ namespace Banking_Management_System
             this.mainMenuWindowToolStripMenuItem.Name = "mainMenuWindowToolStripMenuItem";
             this.mainMenuWindowToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
             this.mainMenuWindowToolStripMenuItem.Text = "Main Menu Window ";
+            this.mainMenuWindowToolStripMenuItem.Click += new System.EventHandler(this.mainMenuWindowToolStripMenuItem_Click);
             // 
             // manageAgentToolStripMenuItem
             // 
@@ -154,12 +155,13 @@ namespace Banking_Management_System
             this.withdrawalsDebitToolStripMenuItem.Name = "withdrawalsDebitToolStripMenuItem";
             this.withdrawalsDebitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.withdrawalsDebitToolStripMenuItem.Text = "Withdrawals/Debit";
+            this.withdrawalsDebitToolStripMenuItem.Click += new System.EventHandler(this.withdrawalsDebitToolStripMenuItem_Click);
             // 
             // Form_Parent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(849, 541);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;

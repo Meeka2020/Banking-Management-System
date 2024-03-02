@@ -32,13 +32,13 @@ namespace Banking_Management_System
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.cmbRole = new System.Windows.Forms.TextBox();
+            this.txtUsername = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSubmit_Click = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -72,22 +72,23 @@ namespace Banking_Management_System
             this.label1.Size = new System.Drawing.Size(472, 57);
             this.label1.TabIndex = 1;
             this.label1.Text = "Bank Management System ";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // textBox1
+            // cmbRole
             // 
-            this.textBox1.Location = new System.Drawing.Point(284, 266);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(275, 27);
-            this.textBox1.TabIndex = 2;
+            this.cmbRole.Location = new System.Drawing.Point(284, 149);
+            this.cmbRole.Multiline = true;
+            this.cmbRole.Name = "cmbRole";
+            this.cmbRole.Size = new System.Drawing.Size(275, 27);
+            this.cmbRole.TabIndex = 2;
             // 
-            // textBox2
+            // txtUsername
             // 
-            this.textBox2.Location = new System.Drawing.Point(284, 206);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(275, 27);
-            this.textBox2.TabIndex = 3;
+            this.txtUsername.Location = new System.Drawing.Point(284, 206);
+            this.txtUsername.Multiline = true;
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(275, 27);
+            this.txtUsername.TabIndex = 3;
             // 
             // label2
             // 
@@ -111,16 +112,17 @@ namespace Banking_Management_System
             this.label3.TabIndex = 5;
             this.label3.Text = "Password";
             // 
-            // button1
+            // btnSubmit_Click
             // 
-            this.button1.BackColor = System.Drawing.Color.MediumSpringGreen;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(364, 313);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(102, 46);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Submit";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnSubmit_Click.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.btnSubmit_Click.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubmit_Click.Location = new System.Drawing.Point(364, 313);
+            this.btnSubmit_Click.Name = "btnSubmit_Click";
+            this.btnSubmit_Click.Size = new System.Drawing.Size(102, 46);
+            this.btnSubmit_Click.TabIndex = 6;
+            this.btnSubmit_Click.Text = "Submit";
+            this.btnSubmit_Click.UseVisualStyleBackColor = false;
+            this.btnSubmit_Click.Click += new System.EventHandler(this.btnSubmit_Click_Click);
             // 
             // label4
             // 
@@ -133,13 +135,14 @@ namespace Banking_Management_System
             this.label4.TabIndex = 7;
             this.label4.Text = "Role ";
             // 
-            // textBox3
+            // txtPassword
             // 
-            this.textBox3.Location = new System.Drawing.Point(284, 140);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(275, 27);
-            this.textBox3.TabIndex = 8;
+            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Location = new System.Drawing.Point(284, 266);
+            this.txtPassword.Multiline = true;
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(275, 27);
+            this.txtPassword.TabIndex = 8;
             // 
             // Login
             // 
@@ -147,13 +150,13 @@ namespace Banking_Management_System
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Banking_Management_System.Properties.Resources.green_2;
             this.ClientSize = new System.Drawing.Size(711, 445);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnSubmit_Click);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtUsername);
+            this.Controls.Add(this.cmbRole);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Name = "Login";
@@ -171,12 +174,12 @@ namespace Banking_Management_System
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox cmbRole;
+        private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSubmit_Click;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtPassword;
     }
 }

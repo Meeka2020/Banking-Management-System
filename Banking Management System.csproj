@@ -33,9 +33,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -47,17 +56,53 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Balance_amt.cs">
+      <DependentUpon>BankManagementSystemModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BankManagementSystemModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BankManagementSystemModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BankManagementSystemModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BankManagementSystemModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BankManagementSystemModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BankManagementSystemModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Cashdeposit.cs">
+      <DependentUpon>BankManagementSystemModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="cust_newaccounts.cs">
+      <DependentUpon>BankManagementSystemModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="deposit.cs">
+      <DependentUpon>BankManagementSystemModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="log.cs">
+      <DependentUpon>BankManagementSystemModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main_Menu_Window.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main_Menu_Window.Designer.cs">
+      <DependentUpon>Main_Menu_Window.cs</DependentUpon>
     </Compile>
     <Compile Include="New Customer.cs">
       <SubType>Form</SubType>
@@ -73,17 +118,35 @@
     <Compile Include="Register New Agents .Designer.cs">
       <DependentUpon>Register New Agents .cs</DependentUpon>
     </Compile>
+    <Compile Include="teams_info.cs">
+      <DependentUpon>BankManagementSystemModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Transaction_Withdrawal_Deposit.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Transaction_Withdrawal_Deposit.Designer.cs">
       <DependentUpon>Transaction_Withdrawal_Deposit.cs</DependentUpon>
     </Compile>
+    <Compile Include="transferamt.cs">
+      <DependentUpon>BankManagementSystemModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="withdrawal.cs">
+      <DependentUpon>BankManagementSystemModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WithdrawalsorDebit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WithdrawalsorDebit.Designer.cs">
+      <DependentUpon>WithdrawalsorDebit.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main_Menu_Window.resx">
+      <DependentUpon>Main_Menu_Window.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="New Customer.resx">
       <DependentUpon>New Customer.cs</DependentUpon>
@@ -104,6 +167,18 @@
     <EmbeddedResource Include="Transaction_Withdrawal_Deposit.resx">
       <DependentUpon>Transaction_Withdrawal_Deposit.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="WithdrawalsorDebit.resx">
+      <DependentUpon>WithdrawalsorDebit.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.Config" />
+    <EntityDeploy Include="BankManagementSystemModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BankManagementSystemModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="BankManagementSystemModel.edmx.diagram">
+      <DependentUpon>BankManagementSystemModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -113,9 +188,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Moneytree.png" />
@@ -131,6 +203,42 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\mb-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-contact-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contact-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cccard_e-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bankhk-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search-removebg-preview1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contact-removebg-preview1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BankManagementSystemModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BankManagementSystemModel.edmx</DependentUpon>
+      <LastGenOutput>BankManagementSystemModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="BankManagementSystemModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BankManagementSystemModel.edmx</DependentUpon>
+      <LastGenOutput>BankManagementSystemModel.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
