@@ -71,6 +71,7 @@ namespace Banking_Management_System
             this.textFnameNC.Name = "textFnameNC";
             this.textFnameNC.Size = new System.Drawing.Size(180, 26);
             this.textFnameNC.TabIndex = 0;
+            this.textFnameNC.TextChanged += new System.EventHandler(this.textFnameNC_TextChanged);
             // 
             // textLNameNC
             // 

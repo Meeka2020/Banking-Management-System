@@ -92,7 +92,7 @@ namespace Banking_Management_System
                     connection.Open();
 
                     // Define your SQL query for inserting a new customer
-                    string insertQuery = "INSERT INTO customer_table (cust_firstname, cust_lastname, date_of_birth, gender, trn_num, " +
+                    string insertQuery = "INSERT INTO Customer (cust_firstname, cust_lastname, date_of_birth, gender, trn_num, " +
                                          "cust_phone, cust_address, occupation, deposit_amount, date_of_deposit) " +
                                          "VALUES (@FirstName, @LastName, @DateOfBirth, @Gender, @TrnNum, @PhoneNumber, " +
                                          "@Address, @Occupation, @DepositAmount, @DateOfDeposit)";
@@ -123,6 +123,13 @@ namespace Banking_Management_System
                             MessageBox.Show("Failed to add customer.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
+
+                    // generate account number
+
+                    // create account record attached to newly created customer
+
+
+                    // create new deposit transaction record for account using the initial deposit amount
                 }
                 catch (Exception ex)
                 {
@@ -313,6 +320,11 @@ namespace Banking_Management_System
             {
                 MessageBox.Show("Please enter a search keyword.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void textFnameNC_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
