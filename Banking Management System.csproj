@@ -59,6 +59,11 @@
     <Compile Include="Balance_amt.cs">
       <DependentUpon>BankManagementSystemModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="bankDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bankDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="BankManagementSystemModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -175,6 +180,17 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>BankManagementSystemModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="bankDataSet.xsc">
+      <DependentUpon>bankDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="bankDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bankDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bankDataSet.xss">
+      <DependentUpon>bankDataSet.xsd</DependentUpon>
+    </None>
     <None Include="BankManagementSystemModel.edmx.diagram">
       <DependentUpon>BankManagementSystemModel.edmx</DependentUpon>
     </None>

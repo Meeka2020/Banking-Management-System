@@ -194,6 +194,7 @@ namespace Banking_Management_System
             this.comboBox1SEXNC.Name = "comboBox1SEXNC";
             this.comboBox1SEXNC.Size = new System.Drawing.Size(150, 21);
             this.comboBox1SEXNC.TabIndex = 15;
+            this.comboBox1SEXNC.SelectedIndexChanged += new System.EventHandler(this.comboBox1SEXNC_SelectedIndexChanged);
             // 
             // label7
             // 
@@ -394,6 +395,7 @@ namespace Banking_Management_System
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.Name = "New_Customer";
             this.Text = "New_Customer";
+            this.Load += new System.EventHandler(this.New_Customer_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4NC)).EndInit();

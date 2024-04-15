@@ -46,7 +46,7 @@ namespace Banking_Management_System
                     {
                         connection.Open();
 
-                        string sqlQuery = "SELECT COUNT(*) FROM logs WHERE username = @username AND job = @role AND user_password = @password";
+                        string sqlQuery = "SELECT COUNT(*) FROM Pcwin_logs   WHERE username = @username AND job = @role AND user_password = @password";
                         SqlCommand command = new SqlCommand(sqlQuery, connection);
                         command.Parameters.AddWithValue("@username", username);
                         command.Parameters.AddWithValue("@role", role);

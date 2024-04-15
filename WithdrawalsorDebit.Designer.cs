@@ -39,15 +39,15 @@ namespace Banking_Management_System
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
+            this.Withdraw_button = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.Amount_Withdraw_textBox = new System.Windows.Forms.TextBox();
+            this.Account_Withdraw_textBox = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.Depositbutn = new System.Windows.Forms.Button();
+            this.Amount_Deposit_textBox = new System.Windows.Forms.TextBox();
+            this.Account_Deposit_textBox = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -116,7 +116,6 @@ namespace Banking_Management_System
             this.Reset_Bal_butn.TabIndex = 3;
             this.Reset_Bal_butn.Text = "Reset";
             this.Reset_Bal_butn.UseVisualStyleBackColor = false;
-            this.Reset_Bal_butn.Click += new System.EventHandler(this.Reset_Bal_butn_Click);
             // 
             // label2
             // 
@@ -162,11 +161,11 @@ namespace Banking_Management_System
             // panel2
             // 
             this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.button4);
+            this.panel2.Controls.Add(this.Withdraw_button);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.textBox4);
-            this.panel2.Controls.Add(this.textBox3);
+            this.panel2.Controls.Add(this.Amount_Withdraw_textBox);
+            this.panel2.Controls.Add(this.Account_Withdraw_textBox);
             this.panel2.Location = new System.Drawing.Point(257, 201);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(302, 168);
@@ -183,16 +182,17 @@ namespace Banking_Management_System
             this.label6.TabIndex = 4;
             this.label6.Text = "Amount:";
             // 
-            // button4
+            // Withdraw_button
             // 
-            this.button4.BackColor = System.Drawing.Color.MediumSpringGreen;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(197, 73);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(84, 33);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "Withdraw";
-            this.button4.UseVisualStyleBackColor = false;
+            this.Withdraw_button.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.Withdraw_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Withdraw_button.Location = new System.Drawing.Point(197, 73);
+            this.Withdraw_button.Name = "Withdraw_button";
+            this.Withdraw_button.Size = new System.Drawing.Size(84, 33);
+            this.Withdraw_button.TabIndex = 5;
+            this.Withdraw_button.Text = "Withdraw";
+            this.Withdraw_button.UseVisualStyleBackColor = false;
+            this.Withdraw_button.Click += new System.EventHandler(this.Withdraw_button_Click);
             // 
             // label5
             // 
@@ -216,27 +216,27 @@ namespace Banking_Management_System
             this.label4.TabIndex = 2;
             this.label4.Text = "Withdraw";
             // 
-            // textBox4
+            // Amount_Withdraw_textBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(79, 101);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 28);
-            this.textBox4.TabIndex = 1;
+            this.Amount_Withdraw_textBox.Location = new System.Drawing.Point(79, 101);
+            this.Amount_Withdraw_textBox.Multiline = true;
+            this.Amount_Withdraw_textBox.Name = "Amount_Withdraw_textBox";
+            this.Amount_Withdraw_textBox.Size = new System.Drawing.Size(100, 28);
+            this.Amount_Withdraw_textBox.TabIndex = 1;
             // 
-            // textBox3
+            // Account_Withdraw_textBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(79, 47);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 29);
-            this.textBox3.TabIndex = 0;
+            this.Account_Withdraw_textBox.Location = new System.Drawing.Point(79, 47);
+            this.Account_Withdraw_textBox.Multiline = true;
+            this.Account_Withdraw_textBox.Name = "Account_Withdraw_textBox";
+            this.Account_Withdraw_textBox.Size = new System.Drawing.Size(100, 29);
+            this.Account_Withdraw_textBox.TabIndex = 0;
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.button5);
-            this.panel3.Controls.Add(this.textBox6);
-            this.panel3.Controls.Add(this.textBox5);
+            this.panel3.Controls.Add(this.Depositbutn);
+            this.panel3.Controls.Add(this.Amount_Deposit_textBox);
+            this.panel3.Controls.Add(this.Account_Deposit_textBox);
             this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.label7);
@@ -246,32 +246,32 @@ namespace Banking_Management_System
             this.panel3.Size = new System.Drawing.Size(287, 168);
             this.panel3.TabIndex = 4;
             // 
-            // button5
+            // Depositbutn
             // 
-            this.button5.BackColor = System.Drawing.Color.MediumSpringGreen;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(190, 73);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(86, 33);
-            this.button5.TabIndex = 6;
-            this.button5.Text = "Deposit";
-            this.button5.UseVisualStyleBackColor = false;
+            this.Depositbutn.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.Depositbutn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Depositbutn.Location = new System.Drawing.Point(190, 73);
+            this.Depositbutn.Name = "Depositbutn";
+            this.Depositbutn.Size = new System.Drawing.Size(86, 33);
+            this.Depositbutn.TabIndex = 6;
+            this.Depositbutn.Text = "Deposit";
+            this.Depositbutn.UseVisualStyleBackColor = false;
             // 
-            // textBox6
+            // Amount_Deposit_textBox
             // 
-            this.textBox6.Location = new System.Drawing.Point(77, 104);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(107, 28);
-            this.textBox6.TabIndex = 4;
+            this.Amount_Deposit_textBox.Location = new System.Drawing.Point(77, 104);
+            this.Amount_Deposit_textBox.Multiline = true;
+            this.Amount_Deposit_textBox.Name = "Amount_Deposit_textBox";
+            this.Amount_Deposit_textBox.Size = new System.Drawing.Size(107, 28);
+            this.Amount_Deposit_textBox.TabIndex = 4;
             // 
-            // textBox5
+            // Account_Deposit_textBox
             // 
-            this.textBox5.Location = new System.Drawing.Point(76, 47);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(108, 29);
-            this.textBox5.TabIndex = 3;
+            this.Account_Deposit_textBox.Location = new System.Drawing.Point(76, 47);
+            this.Account_Deposit_textBox.Multiline = true;
+            this.Account_Deposit_textBox.Name = "Account_Deposit_textBox";
+            this.Account_Deposit_textBox.Size = new System.Drawing.Size(108, 29);
+            this.Account_Deposit_textBox.TabIndex = 3;
             // 
             // label9
             // 
@@ -479,15 +479,15 @@ namespace Banking_Management_System
         private System.Windows.Forms.TextBox ResttxtBx;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button Withdraw_button;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox Amount_Withdraw_textBox;
+        private System.Windows.Forms.TextBox Account_Withdraw_textBox;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Button Depositbutn;
+        private System.Windows.Forms.TextBox Amount_Deposit_textBox;
+        private System.Windows.Forms.TextBox Account_Deposit_textBox;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
